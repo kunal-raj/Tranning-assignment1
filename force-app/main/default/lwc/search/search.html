@@ -1,0 +1,64 @@
+<template>
+    <lightning-tabset>
+        <lightning-tab label="Mentor and New Joinee List">
+            <lightning-record-edit-form object-api-name="Mentor">
+              <div style="width:100%;text-align:center;margin:5px;">
+                <lightning-output-field field-name="Mentors Profile"></lightning-output-field>
+
+                <lightning-output-field field-name="Mentor Name"></lightning-output-field>
+                </div>
+                <div class="slds-p-around_medium lgc-bg">
+                <lightning-tile label="Aditya Gatt" href="/aditya.html" type="media">
+                    <lightning-avatar  size="large" slot="media" src="https://www.lightningdesignsystem.com/assets/images/avatar1.jpg" fallback-icon-name="standard:person_account" alternative-text="Aditya Gatt"></lightning-avatar>
+                    <ul class="slds-list_horizontal slds-has-dividers_right">
+                        <li class="slds-item">aditya@havefunsolving.com</li>
+                    </ul>
+                </lightning-tile>
+                </div>
+                <div class="slds-p-around_medium lgc-bg">
+                    <lightning-tile label="Harshad Babu J M" href="/harsha.html" type="media">
+                        <lightning-avatar  align="right" size="large" slot="media" src="https://www.lightningdesignsystem.com/assets/images/avatar1.jpg" fallback-icon-name="standard:person_account" alternative-text="Harshad Babu J M"></lightning-avatar>
+                        <ul class="slds-list_horizontal slds-has-dividers_right">
+                            <li class="slds-item">harshad.babu@veneratesolutions.com</li>
+                        </ul>
+                    </lightning-tile>
+                    </div>
+            <!--<span>
+                <template if:true={wiredContacts1.data}>
+                    <template for:each={wiredContacts1.data} for:item="contact">
+                        <li key={contact.Id}>
+                            {contact.Name}
+                            </li>
+                    </template>
+                </template>
+                    <template if:true={wiredContacts1.error}>
+                                {wiredContacts1.error}
+                    </template>
+            </span>
+                   <div>
+                        <lightning-button variant="brand" label="view Profile" title="Primary action" class="slds-m-left_x-small"></lightning-button>
+                                </div>-->
+                </lightning-record-edit-form>
+        </lightning-tab>
+        <lightning-tab label="New Joinee Enrollment">
+            <lightning-record-edit-form object-api-name="Job Role">
+           
+                    <div class="slds-form-element">
+                        <div class="slds-text-heading_medium ">New Joinee Details</div>
+                    </div>
+                    <lightning-input-field field-name="New Joinee"></lightning-input-field>
+                    
+                    <lightning-input-field field-name="Mentor__c"></lightning-input-field>
+
+                    <lightning-input-field field-name="User__c"></lightning-input-field>
+
+                <div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <lightning-button class="slds-m-top_small" type="submit" label="Save" onclick={saveClick}></lightning-button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <lightning-button class="slds-m-top_small" label="Cancel" onclick={closepopup} ></lightning-button>
+        </div>
+        </lightning-record-edit-form>
+    </lightning-tab>
+</lightning-tabset>
+</template>
